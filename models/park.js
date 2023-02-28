@@ -63,16 +63,19 @@ Park.prototype.removeAllDinosaursBySpecies = function(species){
     }
 }
 
-Park.prototype.objectOfDinosaursByDietType = function(){
-    const dinosaursByDietType = {};
-    for (dinosaur in this.collectionOfDinosaurs){
-        if(dinosaur.diet in dinosaursByDietType){
-            dinosaursByDietType.dinosaur.diet ++;
-        } else {
-            dinosaursByDietType.dinosaur.diet = 1;
-        }
-    }
-    return dinosaursByDietType;
-}
+// Park.prototype.objectOfDinosaursByDietType = function(){
+//     const dinosaursByDietType = {
+//         'carnivore': 0,
+//         'herbivore': 0,
+//         'omnivore': 0
+//     }
+//     let index = 0
+//     for (const dinosaur in this.collectionOfDinosaurs){
+//         if(dinosaur.diet == dinosaursByDietType[`${dinosaur.diet}`]){
+//             dinosaursByDietType[`${dinosaur.diet}`] += 1 || 1;
+//         }
+//     }
+//     return dinosaursByDietType;
+// }
 
 module.exports = Park;

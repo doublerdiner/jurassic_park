@@ -102,5 +102,16 @@ describe('Park', function() {
     park.removeAllDinosaursBySpecies("t-rex");
     assert.deepStrictEqual(park.collectionOfDinosaurs, [dinosaur3, dinosaur5, dinosaur2])
   });
+  
+  it('should return object of dinosaurs by diet type', function(){
+    park.addDinosaurToCollection(dinosaur1);
+    park.addDinosaurToCollection(dinosaur3);
+    park.addDinosaurToCollection(dinosaur7);
+    park.addDinosaurToCollection(dinosaur5);
+    park.addDinosaurToCollection(dinosaur1);
+    park.addDinosaurToCollection(dinosaur2);
+    const answer = park.objectOfDinosaursByDietType();
+    assert.strictEqual(answer, [dinosaur3, dinosaur5, dinosaur2])
 
+  });
 });
