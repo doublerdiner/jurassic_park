@@ -48,10 +48,19 @@ describe('Park', function() {
     park.addDinosaurToCollection(dinosaur1);
     park.addDinosaurToCollection(dinosaur4);
     const answer = park.findDinosaurThatAttractsMostVisitors();
-    assert.deepStrictEqual(answer, dinosaur1);
+    assert.strictEqual(answer, dinosaur1);
   });
   
-  it('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species', function(){
+    park.addDinosaurToCollection(dinosaur3);
+    park.addDinosaurToCollection(dinosaur5);
+    park.addDinosaurToCollection(dinosaur2);
+    park.addDinosaurToCollection(dinosaur1);
+    park.addDinosaurToCollection(dinosaur1);
+    const answer = park.findDinosaursBySpecies("t-rex");
+    assert.deepStrictEqual(answer, [dinosaur1, dinosaur1])
+
+  });
 
   it('should be able to calculate the total number of visitors per day');
 
