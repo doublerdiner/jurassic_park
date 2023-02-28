@@ -15,10 +15,12 @@ Park.prototype.removeDinosaurFromCollection = function(dinosaur){
 
 Park.prototype.findDinosaurThatAttractsMostVisitors = function(){
     let dinosaurToReturn = null;
+    let maxVisitors = 0;
     for (dinosaur of this.collectionOfDinosaurs){
-        if (dinosaur.guestsAttractedPerDay > dinosaurToReturn){
-            dinosaur = dinosaurToReturn;
-        }
+        if (dinosaur.guestsAttractedPerDay > maxVisitors){
+            maxVisitors = dinosaur.guestsAttractedPerDay;
+            dinosaurToReturn = dinosaur;
+        } 
     }
     return dinosaurToReturn;
 }
