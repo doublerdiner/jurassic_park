@@ -22,7 +22,10 @@ describe('Park', function() {
     assert.strictEqual(park.name, "Jurassic Park");
   });
 
-  it('should have a ticket price');
+  it('should have a ticket price', function(){
+    assert.strictEqual(park.ticketPrice, 10)
+  });
+
 
   it('should have a collection of dinosaurs');
 
