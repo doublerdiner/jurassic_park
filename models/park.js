@@ -48,7 +48,7 @@ Park.prototype.totalNumberOfVisitorsPerYear = function(){
 }
 
 Park.prototype.revenueFromTicketSalesForOneYear = function(){
-    return this.totalNumberOfVisitorsPerYear * this.ticketPrice;
+    return this.totalNumberOfVisitorsPerYear() * this.ticketPrice;
 }
 
 Park.prototype.removeAllDinosaursBySpecies = function(species){
