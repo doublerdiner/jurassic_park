@@ -44,7 +44,7 @@ Park.prototype.totalNumberOfVisitorsPerDay = function(){
 }
 
 Park.prototype.totalNumberOfVisitorsPerYear = function(){
-    return this.totalNumberOfVisitorsPerDay * 365;
+     return this.totalNumberOfVisitorsPerDay() * 365;
 }
 
 Park.prototype.revenueFromTicketSalesForOneYear = function(){

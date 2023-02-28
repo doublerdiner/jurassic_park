@@ -77,8 +77,8 @@ describe('Park', function() {
     park.addDinosaurToCollection(dinosaur2);
     park.addDinosaurToCollection(dinosaur1);
     park.addDinosaurToCollection(dinosaur1);
-    const answer = park.revenueFromTicketSalesForOneYear();
-    assert.strictEqual(answer, 141)
+    const answer = park.totalNumberOfVisitorsPerYear();
+    assert.strictEqual(answer, 51465)
   });
 
   it('should be able to calculate total revenue for one year');
