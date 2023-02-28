@@ -55,11 +55,11 @@ Park.prototype.removeAllDinosaursBySpecies = function(species){
     const arrayOfDinosaursToDelete = [];
     for (dinosaur of this.collectionOfDinosaurs){
         if (dinosaur.species == species){
-            arrayOfDinosaursToDelete.unshift(this.collectionOfDinosaurs.indexOf(dinosaur));
+            arrayOfDinosaursToDelete.unshift(dinosaur);
         }
     }
-    for (index of arrayOfDinosaursToDelete){
-        this.collectionOfDinosaurs.splice(index, 1);
+    for (dinosaur of arrayOfDinosaursToDelete){
+        this.collectionOfDinosaurs.splice(this.collectionOfDinosaurs.indexOf(dinosaur), 1);
     }
 }
 

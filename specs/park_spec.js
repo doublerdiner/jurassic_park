@@ -14,6 +14,7 @@ describe('Park', function() {
     dinosaur4 = new Dinosaur('stegosaurus', 'herbivore', 10);    
     dinosaur5 = new Dinosaur('hagryphus', 'omnivore', 1);
     dinosaur6 = new Dinosaur('khaan', 'omnivore', 2);
+    dinosaur7 = new Dinosaur ('t-rex', 'carnivore', 200);
     
 
   })
@@ -90,6 +91,16 @@ describe('Park', function() {
     const answer = park.revenueFromTicketSalesForOneYear();
     assert.strictEqual(answer, 514650)
   });
-
+  
+  it('should remove all dinosaurs by species', function(){
+    park.addDinosaurToCollection(dinosaur1);
+    park.addDinosaurToCollection(dinosaur3);
+    park.addDinosaurToCollection(dinosaur7);
+    park.addDinosaurToCollection(dinosaur5);
+    park.addDinosaurToCollection(dinosaur1);
+    park.addDinosaurToCollection(dinosaur2);
+    park.removeAllDinosaursBySpecies("t-rex");
+    assert.deepStrictEqual(park.collectionOfDinosaurs, [dinosaur3, dinosaur5, dinosaur2])
+  });
 
 });
