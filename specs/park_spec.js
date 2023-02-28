@@ -104,14 +104,14 @@ describe('Park', function() {
   });
   
   it('should return object of dinosaurs by diet type', function(){
-    park.addDinosaurToCollection(dinosaur1);
-    park.addDinosaurToCollection(dinosaur3);
-    park.addDinosaurToCollection(dinosaur7);
     park.addDinosaurToCollection(dinosaur5);
     park.addDinosaurToCollection(dinosaur1);
-    park.addDinosaurToCollection(dinosaur2);
+    park.addDinosaurToCollection(dinosaur6);
+    park.addDinosaurToCollection(dinosaur4);
+    park.addDinosaurToCollection(dinosaur1);
+    park.addDinosaurToCollection(dinosaur3);
     const answer = park.objectOfDinosaursByDietType();
-    assert.strictEqual(answer, [dinosaur3, dinosaur5, dinosaur2])
+    assert.strictEqual(answer, 0)
 
   });
 });
