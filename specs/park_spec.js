@@ -111,7 +111,7 @@ describe('Park', function() {
     park.addDinosaurToCollection(dinosaur1);
     park.addDinosaurToCollection(dinosaur3);
     const answer = park.objectOfDinosaursByDietType();
-    assert.strictEqual(answer, 0)
+    assert.deepStrictEqual(answer, {carnivore: 2, herbivore: 2, omnivore: 2})
 
   });
 });
